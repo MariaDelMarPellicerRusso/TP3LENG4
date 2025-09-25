@@ -16,7 +16,7 @@ function Home() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/TP3LENG4/">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
