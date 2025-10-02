@@ -1,11 +1,13 @@
 :root {
+  --rosa-claro: #f8c6d8;
+  --rosa-hover: #f49ac1;
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light;
+  color: #2d2d2d;
+  background-color: #fffaf3; /* crema muy claro */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,6 +28,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: #fffaf3; /* crema muy claro */
 }
 
 .navbar-fixed {
@@ -33,7 +36,8 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  background-color: #4B0082;
+  background-color: var(--rosa-claro);
+  color: #a67c52;
   padding: 1rem 2rem;
   display: flex;
   justify-content: flex-start;
@@ -43,11 +47,24 @@ body {
 }
 
 .navbar-link {
-  color: white;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  color: #a67c52;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+.navbar-link:hover {
+  color: var(--rosa-hover);
+}
+
+.navbar-link svg {
+  color: #a67c52;
+  margin-right: 0.4em;
+  font-size: 1.2em;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+.navbar-link:hover svg {
+  color: var(--rosa-hover);
 }
 
 h1 {
@@ -62,12 +79,15 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--rosa-claro);
+  color: #a67c52;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: var(--rosa-hover);
+  color: #fff;
+  border-color: var(--rosa-hover);
 }
 button:focus,
 button:focus-visible {
@@ -76,13 +96,14 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #2d2d2d;
+    background-color: #fffaf3;
   }
   a:hover {
-    color: #747bff;
+    color: #4B0082;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #f5e9da;
+    color: #a67c52;
   }
 }

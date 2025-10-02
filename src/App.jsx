@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import Servicios from "./components/servicios.jsx";
 import FileUploader from "./components/FileUploader";
 import Contacto from "./components/Contacto"; 
 import './App.css';
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/servicios" element={<Servicios />} />
       </Routes>
     </BrowserRouter>
   );
